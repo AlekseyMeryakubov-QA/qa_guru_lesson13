@@ -56,7 +56,7 @@ public class RegistrationTest {
             $("#city").click();
             $("#city div#react-select-4-option-0").click();
             $("#submit").click();
-            
+
             $(".table-responsive").shouldHave(text("Alex Egorov"));
             $(".table-responsive").shouldHave(text("alex@egorov.com"));
             $(".table-responsive").shouldHave(text("Male"));
@@ -68,10 +68,5 @@ public class RegistrationTest {
             $(".table-responsive").shouldHave(text("Haryana Karnal"));
 
             $("#closeLargeModal").click();
-
-
         }
-
-
-
 }
