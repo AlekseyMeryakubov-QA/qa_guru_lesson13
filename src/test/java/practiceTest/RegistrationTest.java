@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -22,7 +20,7 @@ public class RegistrationTest {
         }
 
         @BeforeAll
-        static void BeforeAll () {
+        static void beforeAll() {
 
             Configuration.baseUrl = "https://demoqa.com";
             Configuration.browserSize = "1920x1080";
@@ -52,9 +50,9 @@ public class RegistrationTest {
 
 
             $("#state").click();
-            $("#stateCity-wrapper div#react-select-3-option-2").click();
+            $("#stateCity-wrapper").$(byText("Haryana")).click();
             $("#city").click();
-            $("#city div#react-select-4-option-0").click();
+            $("#stateCity-wrapper").$(byText("Karnal")).click();
             $("#submit").click();
 
             $(".table-responsive").shouldHave(text("Alex Egorov"));
@@ -67,6 +65,5 @@ public class RegistrationTest {
             $(".table-responsive").shouldHave(text("New York"));
             $(".table-responsive").shouldHave(text("Haryana Karnal"));
 
-            $("#closeLargeModal").click();
         }
 }
