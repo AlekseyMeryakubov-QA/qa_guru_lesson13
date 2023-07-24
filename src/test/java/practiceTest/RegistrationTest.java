@@ -43,7 +43,7 @@ public class RegistrationTest {
             $(".react-datepicker__year-select").$(byText("2005")).click();
             $(".react-datepicker__month-select").$(byText("July")).click();
             $("div.react-datepicker__week div.react-datepicker__day--001").click();
-            $("#subjectsInput").setValue("History");
+            $("#subjectsInput").setValue("History").pressEnter();
             $("#hobbiesWrapper").$(byText("Sports")).click();
             $("#uploadPicture").uploadFromClasspath("image.png");
             $("#currentAddress").setValue("New York");
