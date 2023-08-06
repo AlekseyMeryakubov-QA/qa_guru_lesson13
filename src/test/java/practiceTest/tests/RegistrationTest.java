@@ -10,22 +10,13 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationTest {
+public class RegistrationTest extends TestBase {
         static {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         Configuration.browserCapabilities = capabilities;
-        }
-
-        @BeforeAll
-        static void beforeAll() {
-
-            Configuration.baseUrl = "https://demoqa.com";
-            Configuration.browserSize = "1920x1080";
-            Configuration.pageLoadStrategy = "eager";
-            Configuration.timeout = (10);
         }
 
         @Test
