@@ -1,6 +1,10 @@
-.gradle
-.idea
-build
-gradle
-gradlew
-gradlew.bat
+/.gradle
+/.idea
+/build
+*.class
+*.log
+*.error
+/build.gradle
+/gradlew
+/gradlew.bat
+/settings.gradle
