@@ -12,6 +12,7 @@ public class RegistrationTest extends TestBase {
         @Test
         void fillRegistrationFormTest() {
             registrationPage.openPage()
+                    .removeBanner()
                     .setFirstName("Alex")
                     .setLastName("Egorov")
                     .setUserEmail("alex@egorov.com")
