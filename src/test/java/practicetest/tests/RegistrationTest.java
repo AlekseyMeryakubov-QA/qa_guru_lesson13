@@ -1,8 +1,8 @@
-package practiceTest.tests;
+package practicetest.tests;
 
 import org.junit.jupiter.api.Test;
-import practiceTest.pages.RegistrationPage;
-import practiceTest.pages.components.TableResultComponent;
+import practicetest.pages.RegistrationPage;
+import practicetest.pages.components.TableResultComponent;
 
 public class RegistrationTest extends TestBase {
 

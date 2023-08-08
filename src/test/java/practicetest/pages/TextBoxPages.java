@@ -1,4 +1,4 @@
-package practiceTest.pages;
+package practicetest.pages;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;

@@ -1,8 +1,8 @@
-package practiceTest.tests;
+package practicetest.tests;
 
 import org.junit.jupiter.api.Test;
-import practiceTest.pages.TextBoxPages;
-import practiceTest.pages.components.TableResultComponent;
+import practicetest.pages.TextBoxPages;
+import practicetest.pages.components.TableResultComponent;
 
 public class TextBoxTests extends TestBase {
 

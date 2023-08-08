@@ -1,7 +1,7 @@
-package practiceTest.pages;
+package practicetest.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import practiceTest.pages.components.CalendarComponents;
+import practicetest.pages.components.CalendarComponents;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
