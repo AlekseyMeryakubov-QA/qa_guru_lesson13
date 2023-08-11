@@ -19,36 +19,42 @@ public class TextBoxPages {
 
 
     SelenideElement
-            userNameInput =   $("#userName"),
-            userEmailInput =   $("#userEmail"),
-            currentAddressInput =   $("#currentAddress"),
-            permanentAddressInput =   $("#permanentAddress"),
-            submitButton =   $("#submit");
-   public TextBoxPages openPage() {
+            userNameInput = $("#userName"),
+            userEmailInput = $("#userEmail"),
+            currentAddressInput = $("#currentAddress"),
+            permanentAddressInput = $("#permanentAddress"),
+            submitButton = $("#submit");
+
+    public TextBoxPages openPage() {
         open("/text-box");
 
-       return this;
-   }
+        return this;
+    }
+
     public TextBoxPages setUserName(String value) {
         userNameInput.setValue(value);
 
         return this;
     }
+
     public TextBoxPages setUserEmail(String value) {
         userEmailInput.setValue(value);
 
         return this;
     }
+
     public TextBoxPages setCurrentAddress(String value) {
         currentAddressInput.setValue(value);
 
         return this;
     }
+
     public TextBoxPages setPermanentAddress(String value) {
         permanentAddressInput.setValue(value);
 
         return this;
     }
+
     public TextBoxPages setSubmitButton() {
         submitButton.click();
 

@@ -1,14 +1,27 @@
 package practicetest.pages;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import practicetest.pages.components.CalendarComponents;
+import practicetest.pages.components.TableResultComponent;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
+
 public class RegistrationPage {
+    static {
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        Configuration.browserCapabilities = capabilities;
+    }
 
     CalendarComponents calendar = new CalendarComponents();
+    TableResultComponent result = new TableResultComponent();
     SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
@@ -35,25 +48,31 @@ public class RegistrationPage {
 
     public RegistrationPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
+
+
+        return this;
+    }
+
+    public RegistrationPage removeFooter() {
         executeJavaScript("$('footer').remove()");
 
         return this;
     }
 
-    public RegistrationPage setFirstName(String value) {
-        firstNameInput.setValue(value);
+    public RegistrationPage setFirstName(String firstName) {
+        firstNameInput.setValue(firstName);
 
         return this;
     }
 
-    public RegistrationPage setLastName(String value) {
-        lastNameInput.setValue(value);
+    public RegistrationPage setLastName(String lastName) {
+        lastNameInput.setValue(lastName);
 
         return this;
     }
 
-    public RegistrationPage setUserEmail(String value) {
-        userEmailInput.setValue(value);
+    public RegistrationPage setUserEmail(String UserEmail) {
+        userEmailInput.setValue(UserEmail);
 
         return this;
     }
@@ -64,8 +83,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setUserNumber(String value) {
-        userNumberInput.setValue(value);
+    public RegistrationPage setUserNumber(String userNumber) {
+        userNumberInput.setValue(userNumber);
 
         return this;
     }
@@ -73,7 +92,6 @@ public class RegistrationPage {
     public RegistrationPage setBirthDate(String day, String month, String year) {
         birthDateInput.click();
         calendar.setDate(day, month, year);
-
 
         return this;
     }
@@ -121,5 +139,4 @@ public class RegistrationPage {
 
         return this;
     }
-
 }
