@@ -8,10 +8,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class TableResultComponent {
     SelenideElement
-            tableResult = $(".table-responsive");
+            tableResultComponent = $(".table-responsive");
 
     public TableResultComponent checkResult(String value) {
-        tableResult.shouldHave(text(value));
+        tableResultComponent.shouldHave(text(value));
 
         return this;
     }

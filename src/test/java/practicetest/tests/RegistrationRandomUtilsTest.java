@@ -4,12 +4,11 @@ import org.junit.jupiter.api.Test;
 import practicetest.pages.RegistrationPage;
 import practicetest.pages.components.TableResultComponent;
 
-import static com.codeborne.selenide.Selenide.sleep;
 import static practicetest.utils.RandomUtils.*;
 
 public class RegistrationRandomUtilsTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
-    TableResultComponent tableResult = new TableResultComponent();
+    TableResultComponent tableResultComponent = new TableResultComponent();
 
     @Test
     void fillRegistrationFormTest() {
@@ -31,7 +30,7 @@ public class RegistrationRandomUtilsTest extends TestBase {
                 .setCity(city)
                 .setSubmit();
 
-        tableResult
+        tableResultComponent
                 .checkResult(firstName)
                 .checkResult(lastName)
                 .checkResult(userEmail)

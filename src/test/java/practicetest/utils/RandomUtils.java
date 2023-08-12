@@ -2,7 +2,6 @@ package practicetest.utils;
 
 import com.github.javafaker.Faker;
 
-import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
@@ -22,34 +21,39 @@ public class RandomUtils {
             city = getRandomCity(state),
             day = getRandomDay();
 
-    Faker faker = new Faker(new Locale("EN"));
-
     public static int getRandomInt(int min, int max) {
+
         return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
     public static String getRandomFirstName() {
+
         return new Faker().name().firstName();
     }
 
     public static String getRandomLastName() {
+
         return new Faker().name().lastName();
     }
 
     public static String getRandomUserEmail() {
+
         return new Faker().internet().emailAddress();
     }
 
     public static String getRandomGender() {
         String[] genders = {"Male", "Female", "Other"};
+
         return new Faker().options().option(genders);
     }
 
     public static String getRandomUserNumber() {
+
         return new Faker().phoneNumber().subscriberNumber(10);
     }
 
     public static String getRandomYear() {
+
         return new Faker().random().nextInt(2000, 2023).toString();
     }
 
@@ -76,11 +80,12 @@ public class RandomUtils {
     }
 
     public static String getRandomHobby() {
-        String[] hobbys = {"Sports", "Reading", "Music"};
-        return new Faker().options().option(hobbys);
+        String[] hobby = {"Sports", "Reading", "Music"};
+        return new Faker().options().option(hobby);
     }
 
     public static String getRandomAddress() {
+
         return new Faker().address().cityName();
     }
 

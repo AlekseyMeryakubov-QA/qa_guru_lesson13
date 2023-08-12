@@ -1,27 +1,15 @@
 package practicetest.pages;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import practicetest.pages.components.CalendarComponents;
-import practicetest.pages.components.TableResultComponent;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
 public class RegistrationPage {
-    static {
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        Configuration.browserCapabilities = capabilities;
-    }
 
     CalendarComponents calendar = new CalendarComponents();
-    TableResultComponent result = new TableResultComponent();
     SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
