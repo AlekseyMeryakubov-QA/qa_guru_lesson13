@@ -2,10 +2,8 @@ package practicetest.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import practicetest.pages.components.CalendarComponents;
-
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-
 
 public class RegistrationPage {
 
@@ -27,7 +25,6 @@ public class RegistrationPage {
             choiceCity = $("#stateCity-wrapper"),
             submitButton = $("#submit");
 
-
     public RegistrationPage openPage() {
         open("/automation-practice-form");
 
@@ -36,7 +33,6 @@ public class RegistrationPage {
 
     public RegistrationPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
-
 
         return this;
     }

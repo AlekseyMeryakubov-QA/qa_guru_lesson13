@@ -1,7 +1,6 @@
 package practicetest.utils;
 
 import com.github.javafaker.Faker;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
@@ -65,7 +64,7 @@ public class RandomUtils {
     }
 
     public static String getRandomDay() {
-        int day = getRandomInt(1, 28);
+        int day = getRandomInt(1, 31);
         if (day < 10) {
             return "0" + day;
         } else {

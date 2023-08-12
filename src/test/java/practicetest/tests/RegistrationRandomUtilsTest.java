@@ -3,7 +3,6 @@ package practicetest.tests;
 import org.junit.jupiter.api.Test;
 import practicetest.pages.RegistrationPage;
 import practicetest.pages.components.TableResultComponent;
-
 import static practicetest.utils.RandomUtils.*;
 
 public class RegistrationRandomUtilsTest extends TestBase {
@@ -43,6 +42,5 @@ public class RegistrationRandomUtilsTest extends TestBase {
                 .checkResult(image)
                 .checkResult(address)
                 .checkResult(state + " " + city);
-
     }
 }
