@@ -5,6 +5,7 @@ import com.github.javafaker.Faker;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
+
     public static String
             firstName = getRandomFirstName(),
             lastName = getRandomLastName(),

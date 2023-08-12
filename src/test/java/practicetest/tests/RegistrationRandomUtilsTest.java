@@ -7,6 +7,7 @@ import practicetest.pages.components.TableResultComponent;
 import static practicetest.utils.RandomUtils.*;
 
 public class RegistrationRandomUtilsTest extends TestBase {
+
     RegistrationPage registrationPage = new RegistrationPage();
     TableResultComponent tableResultComponent = new TableResultComponent();
 

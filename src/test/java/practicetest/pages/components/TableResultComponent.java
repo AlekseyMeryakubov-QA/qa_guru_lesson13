@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 public class TableResultComponent {
+
     SelenideElement
             tableResultComponent = $(".table-responsive");
 
