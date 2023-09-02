@@ -8,6 +8,7 @@ public class RandomUtils {
     public static String
             firstName = getRandomFirstName(),
             lastName = getRandomLastName(),
+            fullName = getRandomFullName(),
             userEmail = getRandomUserEmail(),
             gender = getRandomGender(),
             userNumber = getRandomUserNumber(),
@@ -34,6 +35,10 @@ public class RandomUtils {
     public static String getRandomLastName() {
 
         return new Faker().name().lastName();
+    }
+    public static String getRandomFullName() {
+
+        return new Faker().name().fullName();
     }
 
     public static String getRandomUserEmail() {
