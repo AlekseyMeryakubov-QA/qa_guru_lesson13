@@ -19,7 +19,9 @@ public class TextBoxPageTest extends TestBase {
     void textBoxTest() {
 
         step("Открыть форму", () -> {
-            textBoxPage.openPage();
+            textBoxPage.openPage()
+                    .removeBannerText()
+                    .removeFooterText();
         });
 
         step("Заполнить поля", () -> {
